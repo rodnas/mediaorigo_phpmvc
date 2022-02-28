@@ -9,10 +9,7 @@ create database
 insert sql\phpmvc.sql
 
 login
-administrator
-rodnas@uw.hu
-phoenix
 
-administrator
-Név: rodnas0204@gmail.com
-Jelszó: admin
+super administrator: rodnas@uw.hu \ phoenix
+
+administrator: rodnas0204@gmail.com \ Jelszó: admin
