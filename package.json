@@ -1,0 +1,11 @@
+{
+    "name": "phpmvc",
+    "version": "18.10.1",
+    "description": "phpmvc",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "private": true,
+    "dependencies": {},
+    "engines": {
+        "node": ">=16"
+    }
+}
