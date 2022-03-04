@@ -209,7 +209,7 @@ ew.ready("head", [
 {{/if}}
 </script>
 <?php } ?>
-<meta name="generator" content="PHPMVC">
+<meta name="generator" content="PHPMaker 2022.11.0">
 </head>
 <body class="<?= Config("BODY_CLASS") ?>">
 <?php if (@!$SkipHeaderFooter) { ?>

@@ -1259,14 +1259,14 @@ class CoreUsersAdd extends CoreUsers
         }
 
         // core_languageID
-        $this->core_languageID->setDbValueDef($rsnew, $this->core_languageID->CurrentValue, null, strval($this->core_languageID->CurrentValue) == "");
+        $this->core_languageID->setDbValueDef($rsnew, $this->core_languageID->CurrentValue, null, strval($this->core_languageID->CurrentValue ?? "") == "");
 
         // core_statusID
-        $this->core_statusID->setDbValueDef($rsnew, $this->core_statusID->CurrentValue, null, strval($this->core_statusID->CurrentValue) == "");
+        $this->core_statusID->setDbValueDef($rsnew, $this->core_statusID->CurrentValue, null, strval($this->core_statusID->CurrentValue ?? "") == "");
 
         // core_groupsID
         if ($Security->canAdmin()) { // System admin
-            $this->core_groupsID->setDbValueDef($rsnew, $this->core_groupsID->CurrentValue, 0, strval($this->core_groupsID->CurrentValue) == "");
+            $this->core_groupsID->setDbValueDef($rsnew, $this->core_groupsID->CurrentValue, 0, strval($this->core_groupsID->CurrentValue ?? "") == "");
         }
 
         // id

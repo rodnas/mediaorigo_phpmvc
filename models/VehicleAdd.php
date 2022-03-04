@@ -1371,7 +1371,7 @@ class VehicleAdd extends Vehicle
         $this->modifyUserID->setDbValueDef($rsnew, $this->modifyUserID->CurrentValue, null);
 
         // core_statusID
-        $this->core_statusID->setDbValueDef($rsnew, $this->core_statusID->CurrentValue, null, strval($this->core_statusID->CurrentValue) == "");
+        $this->core_statusID->setDbValueDef($rsnew, $this->core_statusID->CurrentValue, null, strval($this->core_statusID->CurrentValue ?? "") == "");
 
         // Update current values
         $this->setCurrentValues($rsnew);

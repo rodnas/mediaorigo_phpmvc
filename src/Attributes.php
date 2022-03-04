@@ -16,6 +16,8 @@ class Attributes implements \ArrayAccess, \IteratorAggregate
     }
 
     // offsetSet
+    #[\ReturnTypeWillChange]
+
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -26,24 +28,32 @@ class Attributes implements \ArrayAccess, \IteratorAggregate
     }
 
     // offsetExists
+    #[\ReturnTypeWillChange]
+
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
     }
 
     // offsetUnset
+    #[\ReturnTypeWillChange]
+
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
     }
 
     // offsetGet
+    #[\ReturnTypeWillChange]
+
     public function offsetGet($offset)
     {
         return $this->container[$offset] ?? ""; // No undefined index
     }
 
     // getIterator
+    #[\ReturnTypeWillChange]
+
     public function getIterator()
     {
         return new \ArrayIterator($this->container);

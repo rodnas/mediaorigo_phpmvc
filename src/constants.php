@@ -77,7 +77,7 @@ define(PROJECT_NAMESPACE . "ALLOW_PUSH", 512); // Push
 define(PROJECT_NAMESPACE . "ALLOW_ALL", 1023); // All (1 + 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512)
 
 // Product version
-define(PROJECT_NAMESPACE . "PRODUCT_VERSION", "18.10.0");
+define(PROJECT_NAMESPACE . "PRODUCT_VERSION", "18.11.0");
 
 // Project
 define(PROJECT_NAMESPACE . "PROJECT_NAME", "phpmvc"); // Project name

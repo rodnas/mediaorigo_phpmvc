@@ -193,6 +193,8 @@ class HttpSession implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @return int
      */
+    #[\ReturnTypeWillChange]
+
     public function count()
     {
         return count($_SESSION ?? []); //***
@@ -203,6 +205,8 @@ class HttpSession implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @return \Traversable
      */
+    #[\ReturnTypeWillChange]
+
     public function getIterator()
     {
         return new \ArrayIterator($_SESSION ?? []); //***
@@ -215,6 +219,8 @@ class HttpSession implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @return bool
      */
+    #[\ReturnTypeWillChange]
+
     public function offsetExists($offset)
     {
         return $this->exists($offset);
@@ -227,6 +233,8 @@ class HttpSession implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
+
     public function offsetGet($offset)
     {
         return $this->get($offset);
@@ -238,6 +246,8 @@ class HttpSession implements \ArrayAccess, \Countable, \IteratorAggregate
      * @param mixed $offset
      * @param mixed $value
      */
+    #[\ReturnTypeWillChange]
+
     public function offsetSet($offset, $value)
     {
         $this->set($offset, $value);
@@ -248,6 +258,8 @@ class HttpSession implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @param mixed $offset
      */
+    #[\ReturnTypeWillChange]
+
     public function offsetUnset($offset)
     {
         $this->delete($offset);

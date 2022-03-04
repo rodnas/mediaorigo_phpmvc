@@ -1118,10 +1118,10 @@ class CoreStatusAdd extends CoreStatus
         $this->name->setDbValueDef($rsnew, $this->name->CurrentValue, "", false);
 
         // core_languageID
-        $this->core_languageID->setDbValueDef($rsnew, $this->core_languageID->CurrentValue, null, strval($this->core_languageID->CurrentValue) == "");
+        $this->core_languageID->setDbValueDef($rsnew, $this->core_languageID->CurrentValue, null, strval($this->core_languageID->CurrentValue ?? "") == "");
 
         // core_statusID
-        $this->core_statusID->setDbValueDef($rsnew, $this->core_statusID->CurrentValue, null, strval($this->core_statusID->CurrentValue) == "");
+        $this->core_statusID->setDbValueDef($rsnew, $this->core_statusID->CurrentValue, null, strval($this->core_statusID->CurrentValue ?? "") == "");
 
         // insertUserID
         $this->insertUserID->CurrentValue = CurrentUserID();

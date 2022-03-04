@@ -1096,7 +1096,7 @@ class CoreLanguageAdd extends CoreLanguage
         $rsnew = [];
 
         // id
-        $this->id->setDbValueDef($rsnew, $this->id->CurrentValue, "", strval($this->id->CurrentValue) == "");
+        $this->id->setDbValueDef($rsnew, $this->id->CurrentValue, "", strval($this->id->CurrentValue ?? "") == "");
 
         // imageURL
         if ($this->imageURL->Visible && !$this->imageURL->Upload->KeepFile) {
@@ -1109,7 +1109,7 @@ class CoreLanguageAdd extends CoreLanguage
         }
 
         // core_statusID
-        $this->core_statusID->setDbValueDef($rsnew, $this->core_statusID->CurrentValue, null, strval($this->core_statusID->CurrentValue) == "");
+        $this->core_statusID->setDbValueDef($rsnew, $this->core_statusID->CurrentValue, null, strval($this->core_statusID->CurrentValue ?? "") == "");
 
         // insertUserID
         $this->insertUserID->CurrentValue = CurrentUserID();

@@ -1070,7 +1070,7 @@ class LicenseTypeAdd extends LicenseType
         $this->insertWhen->setDbValueDef($rsnew, $this->insertWhen->CurrentValue, null);
 
         // core_statusID
-        $this->core_statusID->setDbValueDef($rsnew, $this->core_statusID->CurrentValue, null, strval($this->core_statusID->CurrentValue) == "");
+        $this->core_statusID->setDbValueDef($rsnew, $this->core_statusID->CurrentValue, null, strval($this->core_statusID->CurrentValue ?? "") == "");
 
         // Update current values
         $this->setCurrentValues($rsnew);

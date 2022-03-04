@@ -1,5 +1,5 @@
 /*!
- * JavaScript for PHPMaker v2022.10.0
+ * JavaScript for PHPMaker v2022.11.0
  * Copyright (c) e.World Technology Limited. All rights reserved.
  */
 (function (ew$1, $$1, luxon) {

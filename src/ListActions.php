@@ -10,6 +10,8 @@ class ListActions implements \ArrayAccess
     public $Items = [];
 
     // Implements offsetSet
+    #[\ReturnTypeWillChange]
+
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -20,18 +22,24 @@ class ListActions implements \ArrayAccess
     }
 
     // Implements offsetExists
+    #[\ReturnTypeWillChange]
+
     public function offsetExists($offset)
     {
         return isset($this->Items[$offset]);
     }
 
     // Implements offsetUnset
+    #[\ReturnTypeWillChange]
+
     public function offsetUnset($offset)
     {
         unset($this->Items[$offset]);
     }
 
     // Implements offsetGet
+    #[\ReturnTypeWillChange]
+
     public function &offsetGet($offset)
     {
         $item = $this->Items[$offset] ?? null;
